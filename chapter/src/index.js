@@ -28,14 +28,30 @@
 // );
 
 // html-tag-conventions
+// import React from 'react';
+// import { render } from 'react-dom';
+
+// render(
+//   <button title="My Button" foo="bar">
+//     Nhấn nút
+//   </button>,
+//   document.getElementById('root')
+// );
+
+// // render(<button />, document.getElementById('root'));
+
+// jsx-fragments
+
 import React from 'react';
 import { render } from 'react-dom';
 
-render(
-  <button title="My Button" foo="bar">
-    Nhấn nút
-  </button>,
-  document.getElementById('root')
-);
+import WithoutFragments from './WithoutFragments';
+import WithFragments from './WithFragments';
 
-// render(<button />, document.getElementById('root'));
+render(
+    <div>
+        <WithoutFragments />
+        <WithFragments />
+    </div>,
+    document.getElementById('root')
+);
