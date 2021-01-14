@@ -16,12 +16,26 @@
 // // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 // reportWebVitals();
 
+// // hello-jsx
+// import React from 'react';
+// import { render } from 'react-dom';
+
+// render(
+//     <p>
+//         Hello, <strong>How are you ? </strong>
+//     </p>,
+//     document.getElementById('root')
+// );
+
+// html-tag-conventions
 import React from 'react';
 import { render } from 'react-dom';
 
 render(
-    <p>
-        Hello, <strong>How are you ? </strong>
-    </p>,
-    document.getElementById('root')
+  <button title="My Button" foo="bar">
+    Nhấn nút
+  </button>,
+  document.getElementById('root')
 );
+
+// render(<button />, document.getElementById('root'));
