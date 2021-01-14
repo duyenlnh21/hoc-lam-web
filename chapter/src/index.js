@@ -122,20 +122,49 @@
 //     document.getElementById('root')
 // );
 
-// encapsulatin-html
+// // encapsulatin-html
 
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+// import { render } from 'react-dom';
+
+// class MyComponent extends Component {
+//   render() {
+//     return (
+//       <section>
+//         <h1>My Component</h1>
+//         <p>Content in my component...</p>
+//       </section>
+//     );
+//   }
+// }
+
+// render(<MyComponent />, document.getElementById('root'));
+
+
+// mapping-collecttions-to-elements
+
+import React from 'react';
 import { render } from 'react-dom';
 
-class MyComponent extends Component {
-  render() {
-    return (
-      <section>
-        <h1>My Component</h1>
-        <p>Content in my component...</p>
-      </section>
-    );
-  }
-}
+const array = ['First', 'Second', 'Third'];
 
-render(<MyComponent />, document.getElementById('root'));
+const object = {
+    first: 1,
+    second: 2,
+    third: 3
+};
+
+render(
+    <section>
+        <h1>Array</h1>
+        <ul>
+            {array.map(i => (
+                <li key={i}>
+                    <strong>{i}: </strong>
+                    {object[i]}
+                </li>
+            ))}
+        </ul>
+    </section>,
+    document.getElementById('root')
+);
