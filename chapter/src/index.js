@@ -104,20 +104,38 @@
 //     document.getElementById('root')
 // );
 
-//dynamic-property-values-and-text
+// //dynamic-property-values-and-text
 
-import React from 'react';
+// import React from 'react';
+// import { render } from 'react-dom';
+
+// const enabled = false;
+// const text = 'A Button';
+// const placeholder = 'input value...';
+// const size = 50;
+
+// render(
+//     <section>
+//         <button disabled={!enabled}>{text}</button>
+//         <input placeholder={placeholder} size={size} />
+//     </section>,
+//     document.getElementById('root')
+// );
+
+// encapsulatin-html
+
+import React, { Component } from 'react';
 import { render } from 'react-dom';
 
-const enabled = false;
-const text = 'A Button';
-const placeholder = 'input value...';
-const size = 50;
+class MyComponent extends Component {
+  render() {
+    return (
+      <section>
+        <h1>My Component</h1>
+        <p>Content in my component...</p>
+      </section>
+    );
+  }
+}
 
-render(
-    <section>
-        <button disabled={!enabled}>{text}</button>
-        <input placeholder={placeholder} size={size} />
-    </section>,
-    document.getElementById('root')
-);
+render(<MyComponent />, document.getElementById('root'));
